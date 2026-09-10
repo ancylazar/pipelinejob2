@@ -12,13 +12,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'C:\\Users\\ANCY LAZAR\\AppData\\Local\\Programs\\Python\\Launcher\\py.exe -m pip install -r requirements.txt'
+                bat '"C:\\Users\\ANCY LAZAR\\AppData\\Local\\Programs\\Python\\Launcher\\py.exe" -m pip install -r requirements.txt'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
-                bat 'C:\\Users\\ANCY LAZAR\\AppData\\Local\\Programs\\Python\\Launcher\\py.exe -m pytest'
+                bat '"C:\\Users\\ANCY LAZAR\\AppData\\Local\\Programs\\Python\\Launcher\\py.exe" -m pytest'
             }
         }
     }
