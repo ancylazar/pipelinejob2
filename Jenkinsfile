@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
         stage('Checkout') {
             steps {
                 git branch: 'main',
@@ -11,13 +12,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                 bat 'C:\Users\ANCY LAZAR\AppData\Local\Programs\Python\Launcher\py.exe'
+                bat 'C:\\Users\\ANCY LAZAR\\AppData\\Local\\Programs\\Python\\Launcher\\py.exe -m pip install -r requirements.txt'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
-               bat 'C:\Users\ANCY LAZAR\AppData\Local\Programs\Python\Launcher\py.exe'
+                bat 'C:\\Users\\ANCY LAZAR\\AppData\\Local\\Programs\\Python\\Launcher\\py.exe -m pytest'
             }
         }
     }
